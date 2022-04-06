@@ -7,6 +7,14 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
     public VectorHeap(){
         data = new Vector<>();
     }
+    public VectorHeap(Vector<E> v) {
+        int i;
+        data = new Vector<E>(v.size());
+        for (i = 0; i < v.size(); i++) {
+            add(v.get(i));
+        }
+    }
+
 
     protected static int parent(int i) {return (i-1)/2;}
 
