@@ -11,7 +11,7 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
     protected static int parent(int i) {return (i-1)/2;}
 
     protected static int left(int i) {
-        return 2*1+1;
+        return (2*i)+1;
     }
 
     protected static int right(int i) {
@@ -94,5 +94,18 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
     @Override
     public void clear() {
         data = new Vector<>();
+    }
+
+    @Override
+    public String toString() {
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("[");
+        for (E value :
+                data) {
+            buffer.append(value.toString());
+            buffer.append(", ");
+        }
+        buffer.append("]");
+        return buffer.toString();
     }
 }
