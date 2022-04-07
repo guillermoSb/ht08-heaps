@@ -18,5 +18,4 @@ public class HospitalVectorQueue {
     public Paciente siguientePaciente() {
         return this.vectorHeap.remove();
     }
-
 }
