@@ -6,7 +6,17 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Vector;
 
+/**
+ * Realiza la lectura de datos y preparación de los mismos
+ * @author Mariel Guamuche
+ * @author Guillermo Santos
+ */
 public class FileManager {
+    /**
+     * Lee el nombre de un archivo y los datos los simula como pacientes
+     * @param name Archivo
+     * @return Vector con datos de tipo Paciente
+     */
     public static Vector<Paciente> readFile(String name) {
         Vector<Paciente> data = new Vector<>(); // Vector con objetos de tipo paciente; son los pacientes
         File file;          // archivo de texto

@@ -2,6 +2,12 @@ package com.ht08;
 
 import java.util.Vector;
 
+/**
+ * Implementación de VectorHeap
+ * @author Guillermo Santos
+ * @author Mariel Guamuche
+ * @param <E>
+ */
 public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
     private Vector<E> data; // Data almacenada en el heap
 

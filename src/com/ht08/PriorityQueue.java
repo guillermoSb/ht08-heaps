@@ -1,5 +1,11 @@
 package com.ht08;
 
+/**
+ * Interfaz del priority queue
+ * @param <E>
+ * @author Guillermo Santos
+ * @author Mariel Guamuche
+ */
 public interface PriorityQueue<E extends Comparable<E>> {
 
     /**

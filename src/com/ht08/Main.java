@@ -5,6 +5,11 @@ import java.util.Vector;
 
 public class Main {
 
+    /**
+     * Realización de priorización de atención en emergencias usando priority queue
+     * @author Guillermo Santos
+     * @author Mariel Guamuche
+     */
     public static void main(String[] args) {
         Vector<Paciente> pacienteEmergencia = new Vector<>();
         VectorHeap pacientes = new VectorHeap();
@@ -48,7 +53,7 @@ public class Main {
                             count++;
 
                         }
-                        break;
+                    break;
                     case 2: // Implementacion con Java Collection Framework
                         HospitalPriorityQueue hosp = new HospitalPriorityQueue(pacienteEmergencia);
                         while (count < pacientesInicial && input == true) {
@@ -56,7 +61,7 @@ public class Main {
                             System.out.println(atendiendo);
                             count++;
                         }
-                        break;
+                    break;
                     default: System.out.println("Opción no válida. Nos vemos pronto"); break;
                 }
             } else System.err.println("Su archivo no fue encontrado. Asegurese de ingresar el nombre del archivo y extension");

@@ -1,5 +1,10 @@
 package com.ht08;
 
+/**
+ *  Similución de hospital usando implementación de la interfaz usando VectorHeap
+ *  @author Guillermo Santos
+ *  @author Mariel Guamuche
+ */
 public class HospitalVectorQueue {
     private VectorHeap<Paciente> vectorHeap;    // Priority Queue para almacenar pacientes
 
