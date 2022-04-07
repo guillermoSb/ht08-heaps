@@ -46,12 +46,7 @@ public class Main {
                             Paciente atendiendo = emergenciaVectorQueue.siguientePaciente();
                             System.out.println(atendiendo);
                             count++;
-                            if(count!=pacientesInicial) {
-                                System.out.println("¿Desea mostrar el siguiente paciente? \n1.Sí\n2.No, salir");
-                                opcionContinue = isNumberC(scanner);
-                                if(opcionContinue==1) {input = true; }
-                                else { input = false; }
-                            } else { input = false; }
+
                         }
                         break;
                     case 2: // Implementacion con Java Collection Framework
@@ -60,12 +55,6 @@ public class Main {
                             Paciente atendiendo = hosp.siguientePaciente();
                             System.out.println(atendiendo);
                             count++;
-                            if(count!=pacientesInicial) {
-                                System.out.println("¿Desea mostrar el siguiente paciente? \n1.Sí\n2.No, salir");
-                                opcionContinue = isNumberC(scanner);
-                                if(opcionContinue==1) {input = true; }
-                                else { input = false; }
-                            } else { input = false; }
                         }
                         break;
                     default: System.out.println("Opción no válida. Nos vemos pronto"); break;
