@@ -3,10 +3,19 @@ package com.ht08;
 import java.util.Vector;
 
 public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
-    private Vector<E> data;
+    private Vector<E> data; // Data almacenada en el heap
+
+    /**
+     * Crea una queue vacia
+     */
     public VectorHeap(){
         data = new Vector<>();
     }
+
+    /**
+     * Crea una queue basada en un vector
+     * @param v
+     */
     public VectorHeap(Vector<E> v) {
         int i;
         data = new Vector<E>(v.size());
@@ -15,17 +24,35 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
         }
     }
 
-
+    /**
+     * Obtiene el padre
+     * @param i
+     * @return
+     */
     protected static int parent(int i) {return (i-1)/2;}
 
+    /**
+     * Obtiene el hijo izquierda
+     * @param i
+     * @return
+     */
     protected static int left(int i) {
         return (2*i)+1;
     }
 
+    /**
+     * Obteiene el hijo derecha
+     * @param i
+     * @return
+     */
     protected static int right(int i) {
         return 2*(i+1);
     }
 
+    /**
+     * Mueve una hoja arriba
+     * @param leaf
+     */
     protected void perlocateUp(int leaf) {
         int parent = parent(leaf);  // Obtener el parent
         E value = data.get(leaf);   // Obtener el valor de la leaf
@@ -39,6 +66,10 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
         data.set(leaf, value);
     }
 
+    /**
+     * Mueve la raiz abajo
+     * @param root
+     */
     protected void pushDownRoot(int root) {
         E value = data.get(root);
         int heapSize = data.size();

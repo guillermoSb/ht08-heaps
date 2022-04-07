@@ -37,4 +37,11 @@ public class Paciente implements Comparable<Paciente>{
     public int compareTo(Paciente o) {
         return getPrioridad().compareTo(o.getPrioridad());
     }
+
+    @Override
+    public String toString() {
+        return  nombre  +
+                ", "+ situacion +
+                ", " + prioridad;
+    }
 }
